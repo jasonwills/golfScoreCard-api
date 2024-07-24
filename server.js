@@ -25,7 +25,7 @@ app.use('/api/courses', coursesRouter)
 
 const mongoConnection = async () => {
 	try {
-		const connection = await mongoose.connect(process.env.DB_CONNECTION)
+		const connection = await mongoose.connect('mongodb+srv://root:mJn7KVMMaa@jwcluster.fji4phf.mongodb.net/golfapi')
 		console.log('Connected to DB - ', connection.connection.host, connection.connection.name)
 	} catch (err) {
 		console.error(err)
